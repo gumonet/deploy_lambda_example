@@ -3,7 +3,7 @@ exports.handler = async (event) => {
     //Comment from github
     const response = {
         statusCode: 200,
-        body: JSON.stringify('Hello from Lambda!'),
+        body: JSON.stringify('Hello from Lambda!' + new Date() ),
     };
     return response;
 };
