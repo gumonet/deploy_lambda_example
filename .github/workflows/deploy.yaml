@@ -20,4 +20,4 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: myCustomDeploy
           zip_file: source/deployment.zip
-          handler: index.js
+        
