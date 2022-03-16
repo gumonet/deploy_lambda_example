@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v1
       - name: Build binary
         run: |
-          cd source && zip deployment.zip main
+          zip -r deployment.zip source
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
