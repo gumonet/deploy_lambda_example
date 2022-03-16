@@ -11,6 +11,7 @@ jobs:
       - name: Build binary
         run: |
           zip -r deployment.zip source
+          ls -la
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
@@ -20,3 +21,4 @@ jobs:
           function_name: myCustomDeploy
           source: deployment.zip
           handler: index.js
+          dry_run: true
