@@ -1,6 +1,8 @@
 ## Deploy lambda 
 Using: [AWS Labda deploy - github Actions](https://github.com/marketplace/actions/aws-lambda-deploy)
 
+Check detail [Lambda Action](https://github.com/appleboy/lambda-action)
+
 Policy:
 ~~~
 {

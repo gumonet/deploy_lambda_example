@@ -2,15 +2,12 @@ name: deploy to lambda
 on: [push]
 jobs:
 
-  deploy_zip:
-    name: Deploy lambda function
+  deploy_source:
+    name: deploy lambda from source
     runs-on: ubuntu-latest
     steps:
       - name: checkout source code
         uses: actions/checkout@v1
-      - name: Build binary
-        run: |
-          cd source && zip deployment.zip main
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
@@ -18,5 +15,4 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: myCustomDeploy
-          source: source/deployment.zip
-          handler: index.js
+          source: source/index.js
